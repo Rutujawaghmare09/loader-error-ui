@@ -1,0 +1,106 @@
+/* Background */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+}
+
+/* App container */
+
+.app-container {
+  text-align: center;
+  padding: 40px;
+  color: white;
+}
+
+.app-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Loader */
+
+.loader-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255,255,255,0.3);
+  border-top: 6px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* User grid */
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+/* User card */
+
+.user-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-card h3 {
+  margin-bottom: 10px;
+}
+
+.user-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Error UI */
+
+.error-box {
+  text-align: center;
+  margin-top: 150px;
+  color: white;
+}
+
+.error-box h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.retry-btn {
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #764ba2;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.retry-btn:hover {
+  background: #f1f1f1;
+}
